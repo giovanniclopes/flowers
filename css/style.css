@@ -12,16 +12,35 @@ body {
   width: 100%;
 }
 
-@media (max-width: 680px) {
-  body {
-    background: url(../assets/wallpaper-mbl.jpg) fixed no-repeat;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5.5rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   font: 700 5rem 'Poppins';
   color: white;
   text-align: center;
+  height: min-content;
+  margin: 0;
+}
+
+p {
+  font: 700 4rem 'Poppins';
+  color: white;
+  text-align: center;
+  height: min-content;
+  margin: 0;
 }
 
 button {
@@ -37,4 +56,24 @@ button {
 
 button:hover {
   opacity: 70%;
+}
+
+@media (max-width: 680px) {
+  body {
+    background: #000 url(../assets/wallpaper-mbl.jpg) no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  main {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
 }
